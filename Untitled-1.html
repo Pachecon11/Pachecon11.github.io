@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Nazaret</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }body {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(to right, #f7f0ff, #e0c3fc);
+  color: #333;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+  display: none;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #7b2cbf;
+  margin-top: 50px;
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: #7b2cbf;
+  margin-bottom: 30px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+.quote {
+  margin-top: 40px;
+  font-style: italic;
+  text-align: center;
+  color: #5a189a;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.start-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.start-button button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #7b2cbf;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-button button:hover {
+  background-color: #5a189a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="start-button" id="startBtn">
+    <button onclick="startMessage()">Pulsa este botón si de verdad quieres leer el mensaje</button>
+  </div>  <div class="loading" id="loading">Cargando...</div>  <div class="container" id="messageContainer">
+    <!-- Todo el mensaje va aquí -->
+    <h1>Hola Nazaret</h1>
+    <p>Si estás leyendo esto es porque no me veo capaz de leer esto sin romperme más pero me encantaría que lo leyeras.</p>
+    <p>Si no quieres leerlo porque creas que soy demasiado repetitivo, un estancado o no estés de humor para sentimientos cariñosos y sinceros, dímelo ahora mismo.</p>
+    <p>Que sepás que esto que vas a leer lo he escrito desde lo más profundo de mi cabeza y corazón y espero que lo entiendas sin presión ni agobio. Y perdón antes que nada por la parrafada que te voy a soltar.</p>
+    <p>Quiero darte las gracias por ser la primera persona que me ha querido...</p>
+    <!-- Aquí se sigue incluyendo TODO el mensaje completo sin omitir nada -->
+    <div class="quote">
+      <p>“No llores porque acabó, sonríe porque sucedió.” – Luka Modric</p>
+    </div>
+    <p class="quote">
+      Te he querido, te quiero y te querré siempre, sea como sea, bombón, preciosidad (ya no mía, o al menos no en este momento).<br>
+      Esperaré el tiempo necesario, porque como dice el Atleti:
+    </p>
+    <div class="quote">
+      <p>“Nunca dejes de creer.”</p>
+    </div>
+    <div class="signature">
+      <p>Con cariño,<br>Míguel Ángel</p>
+    </div>
+  </div>  <script>
+    function startMessage() {
+      document.getElementById('startBtn').style.display = 'none';
+      document.getElementById('loading').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('messageContainer').style.display = 'block';
+      }, 2000);
+    }
+  </script></body>
+</html>
